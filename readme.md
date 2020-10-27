@@ -1,21 +1,34 @@
-# fuzzy-string
+# string-fuzzy
 
-> Compare text in any possible way(fuzzy-search).
+> Compare text in any possible way(string-fuzzy).
 
 
-[![Rate on Openbase](https://badges.openbase.io/js/rating/fuzzy-string.svg)](https://openbase.io/js/fuzzy-string?utm_source=embedded&utm_medium=badge&utm_campaign=rate-badge)
+[![Rate on Openbase](https://badges.openbase.io/js/rating/string-fuzzy.svg)](https://openbase.io/js/string-fuzzy?utm_source=embedded&utm_medium=badge&utm_campaign=rate-badge)
 
-fuzzy-string is an  package  that let's you compare your text value in any possible way . 
+string-fuzzy is an  package  that let's you compare your text value in any possible way . 
 ## Get started
 
 
 ### Include
 ```javascript
-var fuzzy=require('fuzzy-string')
+var fuzzy=require('string-fuzzy')
 ```
 ### Use
 ```javascript
-fuzzy.regex("stringtobesearched");
+var result=fuzzy.regex("stringtobesearched");
+
+```
+## Example
+```javascript
+var fuzzy=require('string-fuzzy')
+app.get("/search/:id",function(req,res){
+var result=fuzzy.regex(req.params.id);
+table.find({cat:result},function(err,call){
+console.log(call);
+})
+})
+
+
 ```
 
 # Contribution
@@ -24,7 +37,7 @@ Very much appreciate any types of donation and support.
 
 ## Code
 
-`fuzzy-string` follows github convention for contributions. Here are some steps:
+`string-fuzzy` follows github convention for contributions. Here are some steps:
 
 1. Fork the repo to your github account
 2. Checkout code from your github repo to your local machine.
